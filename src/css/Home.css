@@ -1,13 +1,9 @@
-/* src/css/Home.css */
-
-/* Page background */
 .home-container {
-  background: #f0f4f8;              /* light, calming grey */
-  min-height: calc(100vh - 128px);  /* account for navbar + footer height */
+  background: #f0f4f8;
+  min-height: calc(100vh - 128px);
   padding: 2rem 1rem;
 }
 
-/* Connected account & owner badges */
 .account-info,
 .owner-info {
   display: inline-block;
@@ -18,16 +14,15 @@
 }
 
 .account-info {
-  background: #e0f2fe;  /* light blue */
-  color:  #0369a1;      /* deep blue */
+  background: #e0f2fe; 
+  color:  #0369a1;  
 }
 
 .owner-info {
-  background: #dcfce7;  /* light green */
-  color:  #15803d;      /* deep green */
+  background: #dcfce7;
+  color:  #15803d; 
 }
 
-/* Section cards */
 .form-section {
   position: relative;
   background: #ffffff;
@@ -43,7 +38,6 @@
   transform: translateY(-4px);
 }
 
-/* Accent stripe on the left of each card */
 .form-section::before {
   content: "";
   position: absolute;
@@ -53,13 +47,11 @@
   background: linear-gradient(180deg, #4f46e5, #8b5cf6);
 }
 
-/* Section titles */
 .form-section h2 {
   margin-bottom: 1rem;
-  color: #1e293b;  /* dark grey */
+  color: #1e293b;
 }
 
-/* Input fields */
 .input-field {
   width: 100%;
   padding: 0.75rem 1rem;
@@ -75,7 +67,6 @@
   border-color: #4f46e5;
 }
 
-/* Buttons */
 .action-button {
   display: inline-flex;
   align-items: center;
@@ -96,7 +87,6 @@
   transform: translateY(-2px);
 }
 
-/* Layout for the two side-by-side forms */
 .forms-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -109,7 +99,6 @@
   }
 }
 
-/* Tweak the spacing around the Results section */
 .records-section {
   margin-top: 3rem;
 }

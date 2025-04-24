@@ -5,12 +5,6 @@ import '../css/PatientRecords.css';
 const PatientRecords = ({ records, patientID }) => (
   <div className="records-section">
     <h2>📚 Patient Records</h2>
-
-    {/* Banner showing which patient you fetched
-    <p className="patient-info">
-      <strong>Patient ID:</strong> {patientID || '—'}
-    </p> */}
-
     {records.length === 0 ? (
       <p className="no-records">No records to display.</p>
     ) : (

@@ -25,7 +25,6 @@ const About = () => (
       </div>
     </div>
 
-    {/* Get Started Section */}
     <div className="get-started-section">
       <h2>Ready to experience secure healthcare data access?</h2><br></br>
       <Link to="/" className="get-started-button">
