@@ -1,28 +1,34 @@
 import React, { useState } from 'react';
+import '../css/AuthorizeProvider.css';
 
 const AuthorizeProvider = ({ contract, isOwner }) => {
-  const [providerAddress, setProviderAddress] = useState('');
+  const [providerAddr, setProviderAddr] = useState('');
 
   const authorize = async () => {
-    if (!isOwner) return alert("Only the owner can authorize.");
-    const tx = await contract.authorizeProvider(providerAddress);
-    await tx.wait();
-    alert("Provider authorized successfully.");
+    if (!isOwner) return alert('Only owner can authorize');
+    if (!providerAddr) return alert('Enter provider address');
+    try {
+      const tx = await contract.authorizeProvider(providerAddr);
+      await tx.wait();
+      alert('Provider authorized');
+      setProviderAddr('');
+    } catch (err) {
+      console.error(err);
+      alert('Authorization failed');
+    }
   };
 
   return (
-    <div className="space-y-2">
-      <h2 className="text-xl font-semibold">✅ Authorize Provider</h2>
+    <div className="form-section">
+      <h2>✅ Authorize Provider</h2>
       <input
-        className="border px-4 py-2 rounded w-full"
+        className="input-field"
+        type="text"
         placeholder="Provider Address"
-        value={providerAddress}
-        onChange={(e) => setProviderAddress(e.target.value)}
+        value={providerAddr}
+        onChange={e => setProviderAddr(e.target.value)}
       />
-      <button
-        className="bg-purple-600 text-white px-4 py-2 rounded"
-        onClick={authorize}
-      >
+      <button className="action-button" onClick={authorize}>
         Authorize
       </button>
     </div>

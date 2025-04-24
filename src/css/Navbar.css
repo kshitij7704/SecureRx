@@ -1,0 +1,14 @@
+.navbar {
+    background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+  }
+  .navbar-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }  

@@ -1,21 +1,32 @@
+// src/components/PatientRecords.js
 import React from 'react';
+import '../css/PatientRecords.css';
 
-const PatientRecords = ({ records }) => {
-  return (
-    <div>
-      <h2 className="text-xl font-semibold">📚 Patient Records</h2>
-      <div className="space-y-4">
+const PatientRecords = ({ records, patientID }) => (
+  <div className="records-section">
+    <h2>📚 Patient Records</h2>
+
+    {/* Banner showing which patient you fetched
+    <p className="patient-info">
+      <strong>Patient ID:</strong> {patientID || '—'}
+    </p> */}
+
+    {records.length === 0 ? (
+      <p className="no-records">No records to display.</p>
+    ) : (
+      <div className="records-grid">
         {records.map((r, i) => (
-          <div key={i} className="border p-4 rounded shadow">
-            <p><strong>ID:</strong> {r.recordID.toNumber()}</p>
+          <div key={i} className="record-card">
+            <p><strong>Patient ID #:</strong> {patientID}</p>
+            <p><strong>Name:</strong> {r.patientName}</p>
             <p><strong>Diagnosis:</strong> {r.diagnosis}</p>
             <p><strong>Treatment:</strong> {r.treatment}</p>
             <p><strong>Date:</strong> {new Date(r.timestamp.toNumber() * 1000).toLocaleString()}</p>
           </div>
         ))}
       </div>
-    </div>
-  );
-};
+    )}
+  </div>
+);
 
 export default PatientRecords;

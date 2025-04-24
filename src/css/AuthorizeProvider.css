@@ -1,0 +1,25 @@
+.form-section {
+    background: #ffffff;
+    border-left: 4px solid #6366f1;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.2s;
+  }
+  .form-section:hover {
+    transform: translateY(-4px);
+  }
+  .form-section h2 {
+    margin-bottom: 0.75rem;
+    color: #4f46e5;
+  }
+  .input-field {
+    margin-bottom: 0.75rem;
+    border: 1px solid #e0e7ff;
+  }
+  .action-button {
+    background: #6366f1;
+  }
+  .action-button:hover {
+    background: #4f46e5;
+  }  

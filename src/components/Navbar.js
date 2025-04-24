@@ -1,11 +1,10 @@
 import React from 'react';
+import '../css/Navbar.css';
 
-const Navbar = () => {
-  return (
-    <nav className="bg-indigo-600 p-4 text-white shadow-md">
-      <div className="text-2xl font-semibold">🩺 Healthcare DApp</div>
-    </nav>
-  );
-};
+const Navbar = () => (
+  <nav className="navbar">
+    <div className="navbar-title">🩺 MedVault</div>
+  </nav>
+);
 
 export default Navbar;
