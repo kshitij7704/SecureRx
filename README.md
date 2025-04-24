@@ -1,4 +1,4 @@
-# SecureRx
+# SecureRx - Secure, transparent, and immutable healthcare records powered by blockchain.
 SecureRx is a blockchain-powered healthcare application that enables secure storage, retrieval, and management of patient records. It ensures immutability, transparency, and fine-grained access control via smart contracts.
 
 ## 🚀 Features
