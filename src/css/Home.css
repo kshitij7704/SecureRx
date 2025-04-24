@@ -1,58 +1,115 @@
+/* src/css/Home.css */
+
+/* Page background */
 .home-container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 1rem;
-  }
-  .account-info,
-  .owner-info {
-    background: #e0f7fa;
-    color: #006064;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
-  }
+  background: #f0f4f8;              /* light, calming grey */
+  min-height: calc(100vh - 128px);  /* account for navbar + footer height */
+  padding: 2rem 1rem;
+}
+
+/* Connected account & owner badges */
+.account-info,
+.owner-info {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+}
+
+.account-info {
+  background: #e0f2fe;  /* light blue */
+  color:  #0369a1;      /* deep blue */
+}
+
+.owner-info {
+  background: #dcfce7;  /* light green */
+  color:  #15803d;      /* deep green */
+}
+
+/* Section cards */
+.form-section {
+  position: relative;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.form-section:hover {
+  transform: translateY(-4px);
+}
+
+/* Accent stripe on the left of each card */
+.form-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, #4f46e5, #8b5cf6);
+}
+
+/* Section titles */
+.form-section h2 {
+  margin-bottom: 1rem;
+  color: #1e293b;  /* dark grey */
+}
+
+/* Input fields */
+.input-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #4f46e5;
+}
+
+/* Buttons */
+.action-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+.action-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Layout for the two side-by-side forms */
+.forms-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
   .forms-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
   }
-  @media (min-width: 768px) {
-    .forms-container {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  }
-  .form-section {
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    padding: 1.5rem;
-    flex: 1 1 calc(50% - 2rem);
-    transition: transform 0.2s;
-  }
-  .form-section:hover {
-    transform: translateY(-4px);
-  }
-  .input-field {
-    width: 100%;
-    padding: 0.75rem;
-    margin: 0.5rem 0;
-    border: 1px solid #d1d5db;
-    border-radius: 6px;
-  }
-  .action-button {
-    display: inline-block;
-    background: #4f46e5;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background 0.2s, transform 0.1s;
-  }
-  .action-button:hover {
-    background: #4338ca;
-    transform: translateY(-2px);
-  }  
+}
+
+/* Tweak the spacing around the Results section */
+.records-section {
+  margin-top: 3rem;
+}
