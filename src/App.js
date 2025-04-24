@@ -1,12 +1,15 @@
+import React from 'react';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 import './App.css';
-import Healthcare from './Healthcare';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Healthcare/>
+    <div className="bg-gray-50 min-h-screen">
+      <Navbar />
+      <Home />
     </div>
   );
-}
+};
 
 export default App;
