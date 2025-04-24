@@ -21,52 +21,51 @@ SecureRx is a blockchain-powered healthcare application that enables secure stor
 3. MetaMask or other Web3 wallet
 
 ## 🔧 Installation
-1. Clone the repository:
-```
-git clone https://github.com/kshitij7704/SecureRx
-cd SecureRx
-```
+1. Clone the repository
+    ```
+    git clone https://github.com/kshitij7704/SecureRx
+    cd SecureRx
+    ```
 
-2. Install dependencies:
-```
-npm install
-# or
-yarn install
-```
+2. Install dependencies
+    ```
+    npm install
+    # or
+    yarn install
+    ```
 
 3. Using RemixIDE or Hardhat and Healthcare.sol, get your own contract address and ABI:
 Healthcare.sol
-```
-SecureRx/
-├── contract/
-    └── Healthcare.sol
-```
-Create a .env file in the project root and add your contract address:
-```
-REACT_APP_CONTRACT_ADDRESS=0xYourContractAddressHere
-```
-OR 
-
-Alternatively
-Create Contract.js as
-```
-SecureRx/
-├── src/
-    ├── constant/
-        └── Constant.js
-```
-Contract.js
-```
-export const CONTRACT_ADDRESS = <YOUR_CONTRACT_ADRESS>
-export const CONTRACT_ABI = <YOUR_ABI>
-```
+    ```
+    SecureRx/
+    ├── contract/
+        └── Healthcare.sol
+    ```
+    - Option A: Environment variable<br>
+      Create a .env file in the project root:
+    ```
+    REACT_APP_CONTRACT_ADDRESS=0xYourContractAddressHere
+    ```
+    - Option B: Constants file<br>
+      In src/constants/Contract.js, replace the placeholders:
+    ```
+    SecureRx/
+    ├── src/
+        ├── constant/
+            └── Constant.js
+    ```
+    Contract.js
+    ```
+    export const CONTRACT_ADDRESS = <YOUR_CONTRACT_ADRESS>
+    export const CONTRACT_ABI = <YOUR_ABI>
+    ```
 
 5. Start the development server:
-```
-npm start
-# or
-yarn start
-```
+    ```
+    npm start
+    # or
+    yarn start
+    ```
 Visit http://localhost:3000 and connect your Web3 wallet.
 
 ## 📂 Folder Structure
@@ -123,3 +122,9 @@ SecureRx/
 
 ## 🤝 Contributing
 Contributions are welcome! Please open an issue or submit a pull request.
+Steps:
+1. Fork the repo
+2. Create your feature branch (git checkout -b feature/AmazingFeature)
+3. Commit your changes (git commit -m 'Add some AmazingFeature')
+4. Push to the branch (git push origin feature/AmazingFeature)
+5. Open a Pull Request
