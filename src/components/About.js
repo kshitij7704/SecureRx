@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/About.css';
 
 const About = () => (
@@ -8,6 +9,7 @@ const About = () => (
       MedVault leverages blockchain technology to ensure that patient records are
       secure, tamper-proof, and accessible only by authorized healthcare providers.
     </p>
+
     <div className="features-grid">
       <div className="feature-card">
         <h3>🔐 Security</h3>
@@ -21,6 +23,14 @@ const About = () => (
         <h3>🚀 Transparency</h3>
         <p>All transactions are logged on a public ledger for full auditability.</p>
       </div>
+    </div>
+
+    {/* Get Started Section */}
+    <div className="get-started-section">
+      <h2>Ready to experience secure healthcare data access?</h2><br></br>
+      <Link to="/" className="get-started-button">
+        Get Started
+      </Link>
     </div>
   </div>
 );

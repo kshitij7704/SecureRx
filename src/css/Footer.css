@@ -9,3 +9,14 @@
     margin: 0.25rem 0;
     font-size: 0.875rem;
   }
+  .footer-container a {
+    color: #10b981;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+  }
+  
+  .footer-container a:hover {
+    color: #34d399;
+    text-shadow: 0 0 8px rgba(52, 211, 153, 0.6);
+  }

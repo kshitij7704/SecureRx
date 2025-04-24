@@ -1,3 +1,4 @@
+// src/components/AuthorizeProvider.js
 import React, { useState } from 'react';
 import '../css/AuthorizeProvider.css';
 
@@ -21,6 +22,14 @@ const AuthorizeProvider = ({ contract, isOwner }) => {
   return (
     <div className="form-section">
       <h2>✅ Authorize Provider</h2>
+
+      {/* Instructional text */}
+      <ul className="authorize-instructions">
+        <li>🔒 Make sure you’re connected as the contract owner.</li>
+        <li>📋 Paste the Ethereum address of the new provider.</li>
+        <li>▶️ Click “Authorize” to grant on-chain access.</li>
+      </ul>
+
       <input
         className="input-field"
         type="text"

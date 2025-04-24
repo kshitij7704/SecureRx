@@ -23,3 +23,21 @@
   .action-button:hover {
     background: #4f46e5;
   }  
+  .authorize-instructions {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 1rem 0;
+    color: #4b5563; /* medium gray */
+    font-size: 1rem;
+    padding-bottom: 5vh;
+  }
+  .authorize-instructions li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  .authorize-instructions li::before {
+    content: '';
+    margin-right: 0.5rem;
+  }
+  
