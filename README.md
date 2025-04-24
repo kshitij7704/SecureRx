@@ -60,13 +60,13 @@ Healthcare.sol
     export const CONTRACT_ABI = <YOUR_ABI>
     ```
 
-5. Start the development server:
+4. Start the development server:
     ```
     npm start
     # or
     yarn start
     ```
-Visit http://localhost:3000 and connect your Web3 wallet.
+5. Visit http://localhost:3000 and connect your Web3 wallet.
 
 ## 📂 Folder Structure
 ```
