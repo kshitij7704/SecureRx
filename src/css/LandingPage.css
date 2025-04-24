@@ -1,37 +1,136 @@
 .landing-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   height: calc(100vh - 64px);
   background: linear-gradient(135deg, #2a4751, #416e81);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
+  padding: 0 1rem;
 }
+
 .landing-content {
   max-width: 600px;
   padding: 2rem;
 }
+
 .landing-title {
   font-size: 3rem;
   margin-bottom: 1rem;
-  text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  line-height: 1.2;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 .landing-subtitle {
   font-size: 1.25rem;
   margin-bottom: 2rem;
-  line-height: 1.5;
+  line-height: 1.6;
 }
-.landing-button {
+
+.landing-buttons {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.landing-button.primary {
   background: #10b981;
-  color: #fff;
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s, border-color 0.2s;
+}
+
+.landing-button.primary:hover {
+  background: #059669;
+  transform: translateY(-2px);
+}
+
+.landing-button.primary:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.4);
+}
+
+.features-section {
+  padding: 2rem 1rem 5rem;
+  background-color: #f9fafb;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.features-section h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #111827;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card h4 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #6366f1;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #374151;
+}
+
+.landing-button.secondary {
+  background: linear-gradient(90deg, #6b7280, #4b5563);
+  color: #f3f4f6;
   padding: 0.75rem 2rem;
   font-size: 1rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s, transform 0.1s;
+  margin-top: 2rem;
 }
-.landing-button:hover {
-  background: #059669;
+
+.landing-button.secondary:hover {
+  background: linear-gradient(90deg, #4b5563, #6b7280);
   transform: translateY(-2px);
+}
+
+@media (max-width: 640px) {
+  .landing-title {
+    font-size: 2.25rem;
+  }
+  .landing-subtitle {
+    font-size: 1.125rem;
+  }
+  .landing-button.primary,
+  .landing-button.secondary {
+    width: 100%;
+    padding: 0.75rem;
+  }
+  .features-section {
+    padding: 2rem 1rem;
+  }
 }
