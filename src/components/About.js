@@ -4,7 +4,7 @@ import '../css/About.css';
 
 const About = () => (
   <div className="about-container">
-    <h1>About MedVault</h1>
+    <h1>About SecureRx</h1>
     <p>
       MedVault leverages blockchain technology to ensure that patient records are
       secure, tamper-proof, and accessible only by authorized healthcare providers.
